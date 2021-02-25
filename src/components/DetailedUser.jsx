@@ -9,6 +9,8 @@ const DetailedUser = () => {
 
         <>
 
+<Button className="m-3" as={NavLink} to="/">← Atras</Button>
+
         <Jumbotron fluid>
             <Container>
             <Row>
@@ -16,13 +18,15 @@ const DetailedUser = () => {
       <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Ibm_px_xt_color.jpg" thumbnail />
     </Col>
     <Col xs={6} md={8} lg={8} xl={8}>
-    <h1>Nombre</h1>
-  <h1>Otro Dato</h1> 
-  <p>Otro Dato</p>
+    <h1>Nombre , Apellido</h1>
+  <h1>usuario</h1> 
+  <p>city , country</p>
 
   <Button href='mailto:example@example.com'>Contactar</Button> 
     </Col>
     </Row>
+
+
 
 
   </Container>
