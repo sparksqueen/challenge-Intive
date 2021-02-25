@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Find Me",
+  "name": "Example page created in React",
   "icons": [
     {
       "src": "favicon.ico",

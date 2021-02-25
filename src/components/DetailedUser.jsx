@@ -9,9 +9,9 @@ const DetailedUser = () => {
 
         <>
 
-<Button className="m-3" as={NavLink} to="/">← Atras</Button>
+<Button style={{backgroundColor:"#df1676", border:'none'}} className="m-3" as={NavLink} to="/">← Atras</Button>
 
-        <Jumbotron fluid>
+        <Jumbotron className="mx-3" style={{backgroundColor:"#0076c330"}} fluid>
             <Container>
             <Row>
     <Col xs={6} md={4} lg={4} xl={4}>
