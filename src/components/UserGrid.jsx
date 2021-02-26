@@ -1,7 +1,7 @@
 import { Container , Row } from 'react-bootstrap'
 import User from './User'
 import LoadMore from './LoadMore'
-import React, { useState , useContext , useEffect } from 'react'
+import React, { useContext , useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalContext'
 import { getUsers } from '../services/UserServices'
  
@@ -11,14 +11,14 @@ const Grid = () => {
     const { users, setUsers } = useContext( GlobalContext )
 
 //retorna los datos del JSON solicitado en UserServices
-    useEffect(() => {
-        async function GetUsersAsync () {
-            const data = await getUsers()
-            setUsers(data);
-        }
+        useEffect(() => {
+            async function GetUsersAsync () {
+                const data = await getUsers()
+                setUsers(data);
+            }
 
-        GetUsersAsync()
-    }, [])
+            GetUsersAsync()
+        }, [])
 
     return (
     <>
@@ -30,6 +30,7 @@ const Grid = () => {
             ))
             }
             </Row>
+            
             <LoadMore/>
         </Container>
     </>

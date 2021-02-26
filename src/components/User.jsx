@@ -1,11 +1,9 @@
 import { Card , Col} from 'react-bootstrap';
-import { NavLink , useParams } from 'react-router-dom';
-import React, { useState, useEffect , useContext } from 'react';
-import { GlobalContext } from '../context/GlobalContext';
+import { NavLink } from 'react-router-dom';
 
 
 const User = ({user}) => {
-    
+     
 
     return(
     <>

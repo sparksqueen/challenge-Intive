@@ -6,19 +6,17 @@ import { Button , Spinner } from 'react-bootstrap'
 
 const LoadMore = () => {
 
-    const { users, setUsers } = useContext( GlobalContext );
-    const [page, setPage] = useState(0);
-    const [isFetching, setIsFetching] = useState(false);
+    const { users, setUsers } = useContext( GlobalContext )
+    const [page, setPage] = useState(0)
+    const [isFetching, setIsFetching] = useState(false)
 
     useEffect(() => {
         if(page > 0) {
             async function GetUsersAsync () {
                 const data = await getUsersPaging( 8, page )
-
                 setUsers([...users, ...data])
                 setIsFetching(false)
             }
-
             GetUsersAsync()
         }
     },[page])
@@ -34,7 +32,7 @@ const LoadMore = () => {
     	    <div className="row w-100 align-items-center">
     	    	<div className="col text-center">
                     {isFetching ? <Spinner animation="border" role="status" />  
-                                : <Button onClick={showMore} disabled={isFetching}>Mostrar Más</Button>
+                                : <Button onClick={showMore} disabled={isFetching}>Show More</Button>
                     }               
     		    </div>	
     	    </div>    

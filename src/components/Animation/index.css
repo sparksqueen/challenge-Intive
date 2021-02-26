@@ -20,7 +20,7 @@ h1 span {
     width: 0;
     background: white;
     border-left: 1px solid #000;
-    animation: machine 5s alternate steps(26);
+    animation: machine 10s alternate steps(25);
 }
 
 @keyframes machine {
