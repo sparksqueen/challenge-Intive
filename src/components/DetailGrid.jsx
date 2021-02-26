@@ -16,9 +16,9 @@ const DetailedUser = () => {
     useEffect(() => {
       const  user = users.find(element => {return element.email === email})
 //      console.log(user)
-      setUserData(user)     
+      setUserData(Object.values(user))     
       }, [])
- //     console.log(userData)
+      console.log(userData)
 
   return (
   <>
