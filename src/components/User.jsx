@@ -1,18 +1,26 @@
 import { Card , Col} from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink , useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
 
 
-const User = ({usuarios}) => {
+const User = ({user}) => {
+
+    
+    const [singleUser, setSingleUser] = useState([]);
+    const { id } = useParams()
+
     return(
     <>
+    
         <Col className="mb-4" >
-            <Card as={NavLink} to="/detalles" >
-                <div style={{height: 200}}>
-                    <Card.Img className="d-block mx-auto" style={{maxHeight: 200, width: "auto", maxWidth: "100%"}} variant="top" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Ibm_px_xt_color.jpg"/>
-                </div>
+            <Card as={NavLink} to={`/usr/${user.email}`} >
+    
+                    <Card.Img className="d-block mx-auto" variant="top" src={user.picture.large}/>
+            
                 <Card.Body>
-                    <Card.Title >Full Name</Card.Title> 
-                    <Card.Text>City, Country</Card.Text>
+                    <Card.Title >{`${user.name.first} ${user.name.last}` }</Card.Title> 
+                    <Card.Text><i className="far fa-flag"></i>{` ${user.location.country}, ${user.location.city}`}</Card.Text>
+                    
                 </Card.Body>
             </Card>
         </Col>

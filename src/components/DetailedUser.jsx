@@ -7,7 +7,7 @@ const DetailedUser = () => {
   
     return (
     <>
-      <Button style={{backgroundColor:"#df1676", border:'none'}} className="m-3" as={NavLink} to="/">← Atras</Button>
+      <Button style={{backgroundColor:"#df1676", border:'none'}} className="m-3" as={NavLink} to="/"><i class="fas fa-home"></i></Button>
 
       <Jumbotron className="mx-3" style={{backgroundColor:"#0076c330"}} fluid>
         <Container>
