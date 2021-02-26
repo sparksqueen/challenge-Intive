@@ -1,10 +1,6 @@
-import React, { useContext } from 'react'
 import { Image , Col , Button } from 'react-bootstrap';
-import { GlobalContext } from '../context/GlobalContext';
 
 const Detail = ({user}) => {
-    const { userData } = useContext (GlobalContext)
-    console.log(userData)
 
     return ( 
         <>

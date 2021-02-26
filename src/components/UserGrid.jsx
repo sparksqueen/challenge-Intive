@@ -20,7 +20,7 @@ const Grid = () => {
             GetUsersAsync()
 
         }, [])
-        console.log(users)
+//        console.log(users)
 
     return (
     <>

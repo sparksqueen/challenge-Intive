@@ -9,7 +9,6 @@ import Detail from './Detail';
 const DetailedUser = () => {
   
   const { users } = useContext( GlobalContext )
-  const { userData , setUserData } = useContext ( GlobalContext)
   const { email } = useParams();
   //  console.log(users)
   const  user = users.find(element => {return element.email === email})
