@@ -1,5 +1,6 @@
 import { Container , Row } from 'react-bootstrap'
 import User from './User'
+import LoadMore from './LoadMore'
 import React, { useState , useContext , useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalContext'
 import { getUsers } from '../services/UserServices'
@@ -29,6 +30,7 @@ const Grid = () => {
                     ))
                 }
             </Row>
+            <LoadMore/>
         </Container>
     </>
     )

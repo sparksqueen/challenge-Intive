@@ -12,3 +12,15 @@ export const getUsers = async () => {
 
     return results;
 }
+//fetch para paginacion
+export const getUsersPaging = async (length, page = 0) => {
+    const url = `https://randomuser.me/api/?results=${length}&page=${page}`;
+    console.log('Llamada Fetch Paginado ');
+    const response = await fetch(url);
+    const { results } = await response.json();
+
+    console.log('Resultado : ', results);
+
+    return results;
+    
+} 
