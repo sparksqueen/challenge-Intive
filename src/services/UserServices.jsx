@@ -6,7 +6,7 @@ export const getUsers = async () => {
     const response = await fetch(url)
     const { results } = await response.json()
 
-//    console.log('Resultado : ', results)
+    console.log('Resultado : ', results)
 
     return results;
 }
@@ -17,7 +17,7 @@ export const getUsersPaging = async (length, page = 0) => {
     const response = await fetch(url)
     const { results } = await response.json()
 
-//    console.log('Resultado : ', results)
+    console.log('Resultado : ', results)
 
     return results;
     

@@ -4,7 +4,7 @@ import { GlobalContext } from '../context/GlobalContext';
 
 const Detail = () => {
     const { userData } = useContext (GlobalContext)
- //   console.log(userData)
+    console.log(userData)
 
     return ( 
         <>
