@@ -10,7 +10,7 @@ import Animation from './components/Animation';
 
 const App = () => {
   const [users, setUsers] = useState([])
-  const [userData, setUserData] = useState([])
+  const [userData, setUserData] = useState({})
 
   return(
   <> 

@@ -1,4 +1,4 @@
-import React, { useContext , useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Jumbotron , Container , Row , Button } from 'react-bootstrap';
 import { NavLink , useParams } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext';
@@ -11,14 +11,8 @@ const DetailedUser = () => {
   const { users } = useContext( GlobalContext )
   const { userData , setUserData } = useContext ( GlobalContext)
   const { email } = useParams();
-    console.log(users)
-
-    useEffect(() => {
-      const  user = users.find(element => {return element.email === email})
-//      console.log(user)
-      setUserData(Object.values(user))    
-      }, [])
-      console.log(userData)
+  //  console.log(users)
+  const  user = users.find(element => {return element.email === email})
 
   return (
   <>
@@ -27,7 +21,7 @@ const DetailedUser = () => {
     <Jumbotron className="mx-3" style={{backgroundColor:"#0076c330"}} fluid>
       <Container>
         <Row>
-          <Detail/>
+          <Detail user={user}/>
         </Row>
       </Container>
     </Jumbotron>
