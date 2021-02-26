@@ -1,0 +1,34 @@
+.contenedor {
+    margin:auto;
+    display: table;
+}
+
+.h1 {
+    float: left;
+    color: #000;
+    font-family:monospace;
+    position: relative;
+    font-size: 4vw;
+}
+body{ 
+    margin-top: 2vw;
+}
+
+h1 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: white;
+    border-left: 1px solid #000;
+    animation: machine 5s alternate steps(26);
+}
+
+@keyframes machine {
+    from {
+        width: 100%;
+
+    }
+    to { 
+        width: 0;
+    }
+}

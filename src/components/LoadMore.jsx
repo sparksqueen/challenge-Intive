@@ -13,36 +13,32 @@ const LoadMore = () => {
     useEffect(() => {
         if(page > 0) {
             async function GetUsersAsync () {
-                const data = await getUsersPaging( 8, page );
+                const data = await getUsersPaging( 8, page )
 
-                setUsers([...users, ...data]);
-                setIsFetching(false);
+                setUsers([...users, ...data])
+                setIsFetching(false)
             }
 
-            GetUsersAsync();
+            GetUsersAsync()
         }
     },[page])
 
     const showMore = () => {
-        setIsFetching(true);
-        setPage(page + 1);
+        setIsFetching(true)
+        setPage(page + 1)
     }
 
     return(
     <>
-
-            <div className="container-fluid h-100"> 
-    		<div className="row w-100 align-items-center">
-    			<div className="col text-center">
-                    { isFetching && (
-                        <Spinner animation="border" role="status">
-                        <span className="sr-only">Loading...</span>
-                        </Spinner>
-                    )}
-                    <Button onClick={showMore} disabled={isFetching}>Mostrar Más</Button>
-    			</div>	
-    		</div>
-            </div>
+        <div className="container-fluid h-100"> 
+    	    <div className="row w-100 align-items-center">
+    	    	<div className="col text-center">
+                    {isFetching ? <Spinner animation="border" role="status" />  
+                                : <Button onClick={showMore} disabled={isFetching}>Mostrar Más</Button>
+                    }               
+    		    </div>	
+    	    </div>    
+        </div>
     </>
     )
 }
