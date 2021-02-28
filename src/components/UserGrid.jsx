@@ -12,13 +12,14 @@ const Grid = () => {
 
 //retorna los datos del JSON solicitado en UserServices
         useEffect(() => {
-            async function GetUsersAsync () {
-                const data = await getUsers()
-                setUsers(data);
-            }
+            if(users.length === 0){
+                async function GetUsersAsync () {
+                    const data = await getUsers()
+                    setUsers(data);
+                }
 
-            GetUsersAsync()
-
+                GetUsersAsync()
+            }   
         }, [])
 //        console.log(users)
 

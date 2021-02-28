@@ -10,6 +10,7 @@ import Animation from './components/Animation';
 
 const App = () => {
   const [users, setUsers] = useState([])
+//  console.log(users.length)
 
   return(
   <> 

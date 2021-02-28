@@ -6,12 +6,12 @@ import Detail from './Detail';
 
 //comenté los console.log en el caso de que deseen activarlos para hacer comprobaciones
 
-const DetailedUser = () => {
+const DetailGrid = () => {
   
   const { users } = useContext( GlobalContext )
   const { email } = useParams();
   //  console.log(users)
-  const  user = users.find(element => {return element.email === email})
+  const user = users.find(element => {return element.email === email})
 
   return (
   <>
@@ -27,4 +27,4 @@ const DetailedUser = () => {
   </>
   )
 }
-export default DetailedUser;
+export default DetailGrid;
