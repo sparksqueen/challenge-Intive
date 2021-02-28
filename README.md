@@ -15,4 +15,4 @@ Este código posee algunos detalles de los que soy consciente pero debido al tie
 
 ### Problemas 
 - 1)Al momento de navegar hacia la página de detalle, si se actualiza manualmente la página, la página presenta un bug, ya que no recibe los datos necesarios para seguir funcionando.
-- 2)Debido al funcionamiento de la API (generacion aleatoria de usuarios), cuando se navega desde detalle hacia home, la aplicacion devuelve un nuevo array de objetos, en lugar de volver al array creado en la instancia anterior.
+-RESUELTO CON RENDERIZADO CONDICIONAL! ~~2)Debido al funcionamiento de la API (generacion aleatoria de usuarios), cuando se navega desde detalle hacia home, la aplicacion devuelve un nuevo array de objetos, en lugar de volver al array creado en la instancia anterior.~~
