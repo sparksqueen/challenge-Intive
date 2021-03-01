@@ -8,7 +8,7 @@ const User = ({user}) => {
     return(
     <>
         <Col className="mb-4" >
-            <Card as={NavLink} to={`/usr/${user.email}`} >
+            <Card as={NavLink} to={`/usr/${user.login.username}`} >
                 <Card.Img className="d-block mx-auto" variant="top" src={user.picture.large}/>
                 <Card.Body>
                     <Card.Title >{`${user.name.first} ${user.name.last}` }</Card.Title> 

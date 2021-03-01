@@ -24,7 +24,7 @@ const App = () => {
             <UserGrid/>
           </Route>
 
-          <Route path="/usr/:email"> 
+          <Route path="/usr/:username"> 
             <DetailGrid users={users}/>
           </Route>
 
